@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  name: eportal-liferay-app
+  labels:
+    app: eportal-liferay-app
+spec:
+  selector:
+    app: eportal-liferay-app
+  ports:
+    - port: 8080
+      protocol: TCP
+      targetPort: 8080
+      
