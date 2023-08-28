@@ -3,7 +3,7 @@ kind: Service
 metadata:
   creationTimestamp: null
   namespace: eportal
-  name: eportal-liferay-app
+  name: eportal-liferay
   labels:
     app: eportal-liferay-app
 spec:
