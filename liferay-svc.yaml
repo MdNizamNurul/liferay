@@ -3,12 +3,12 @@ kind: Service
 metadata:
   creationTimestamp: null
   namespace: eportal
-  name: eportal-liferay
+  name: eportal
   labels:
-    app: eportal-liferay-app
+    app: eportal
 spec:
   selector:
-    app: eportal-liferay-app
+    app: eportal
   ports:
     - port: 8080
       protocol: TCP
