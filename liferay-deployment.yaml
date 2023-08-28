@@ -2,21 +2,21 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   namespace: eportal
-  app: eportal-liferay-app
-  name: eportal-liferay
+  app: eportal
+  name: eportal
 spec:
   selector:
     matchLabels:
-      app: eportal-liferay-app
+      app: eportal
   replicas: 1
   template:
     metadata:
       creationTimestamp: null
       labels:
-        app: eportal-liferay-app
+        app: eportal
     spec:
       containers:
-        - name: eportal-liferay
+        - name: eportal
           image: >-
             image-registry.openshift-image-registry.svc:5000/openshift/httpd:latest
           ports:
