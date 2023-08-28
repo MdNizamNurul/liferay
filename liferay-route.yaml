@@ -1,0 +1,21 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  creationTimestamp: null
+  namespace: eportal
+  labels: 
+    app: eportal-liferay-app
+  name: eportal-liferay-app
+spec:
+  host: "eportal-liferay-eportal.eu-de-3.icp.infineon.com"
+  port:
+    targetPort: 8080
+  to:
+    kind: Service
+    name: eportal-liferay-app
+    weight: 100
+status:
+  ingress:
+  - conditions:
+    - status: "True"
+      type: Admitted
