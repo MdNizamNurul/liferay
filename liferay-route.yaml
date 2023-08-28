@@ -4,15 +4,15 @@ metadata:
   creationTimestamp: null
   namespace: eportal
   labels: 
-    app: eportal-liferay-app
-  name: eportal-liferay
+    app: eportal
+  name: eportal
 spec:
   host: "eportal-liferay-eportal.eu-de-3.icp.infineon.com"
   port:
     targetPort: 8080
   to:
     kind: Service
-    name: eportal-liferay
+    name: eportal
     weight: 100
 status:
   ingress:
