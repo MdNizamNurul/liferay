@@ -1,4 +1,4 @@
 apiVerson: v1
 kind: Namespace
 metadata:
-  name: eportal-liferay-app
+  name: eportal
