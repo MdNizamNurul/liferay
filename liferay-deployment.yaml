@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   namespace: eportal
   app: eportal-liferay-app
-  name: eportal-liferay-app
+  name: eportal-liferay
 spec:
   selector:
     matchLabels:
@@ -16,7 +16,7 @@ spec:
         app: eportal-liferay-app
     spec:
       containers:
-        - name: eportal-liferay-app
+        - name: eportal-liferay
           image: >-
             image-registry.openshift-image-registry.svc:5000/openshift/httpd:latest
           ports:
