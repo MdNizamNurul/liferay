@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: eportal
+  app: eportal-liferay-app
+  name: eportal-liferay-app
+spec:
+  selector:
+    matchLabels:
+      app: eportal-liferay-app
+  replicas: 1
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: eportal-liferay-app
+    spec:
+      containers:
+        - name: eportal-liferay-app
+          image: >-
+            image-registry.openshift-image-registry.svc:5000/openshift/httpd:latest
+          ports:
+            - containerPort: 8080
+              protocol: TCP
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
