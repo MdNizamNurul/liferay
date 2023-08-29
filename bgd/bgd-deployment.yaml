@@ -16,6 +16,9 @@ spec:
     spec:
       containers:
         - name: bgd
-          image: >-
-            image-registry.openshift-image-registry.svc:5000/openshift/httpd:latest
+          image: quay.io/redhatworkshops/bgd:latest
+          env:
+          - name: COLOR
+            value: "blue"
+            resources: {}
           
