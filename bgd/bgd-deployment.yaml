@@ -8,7 +8,6 @@ metadata:
     image.openshift.io/triggers: >-
       [{"from":{"kind":"ImageStreamTag","name":"eportal-liferay:latest","namespace":"eportal-build"},"fieldPath":"spec.template.spec.containers[?(@.name==\"eportal-liferay\")].image","pause":"false"}]
     openshift.io/generated-by: OpenShiftWebConsole
-  resourceVersion: '6886902524'
   name: eportal-liferays
   uid: 7f89489d-abb1-45e4-a7a6-560c519ef0d1
   creationTimestamp: '2023-08-23T02:46:32Z'
