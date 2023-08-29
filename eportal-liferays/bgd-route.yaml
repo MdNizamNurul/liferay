@@ -2,18 +2,18 @@ kind: Route
 apiVersion: route.openshift.io/v1
 metadata:
   creationTimestamp: null
-  namespace: eportal-staging
-  name: bgd
+  namespace: eportal
+  name: eportal-liferays
   labels: 
-    app: bgd
+    app: eportal-liferays-app
   
 spec:
-  host: "eportal-liferay-eportal.eu-de-3.icp.infineon.com"
+  host: "eportal-liferays-eportal.eu-de-3.icp.infineon.com"
   port:
     targetPort: 8080
   to:
     kind: Service
-    name: bgd
+    name: eportal-liferays
     weight: 100
 status:
   ingress:
