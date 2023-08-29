@@ -1,21 +1,52 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  app: eportal-liferays-app
-  name: eportal-liferays
+  namespace: eportal
+  name: 'eportal-liferays'
+  annotations: 
+    alpha.image.policy.openshift.io/resolve-names: '*'
+    app.openshift.io/route-disabled: 'false'
+    deployment.kubernetes.io/revision: '1'
+    image.openshift.io/triggers: >-
+      [{"from":{"kind":"ImageStreamTag","name":"eportal-liferay:latest","namespace":"eportal-build"},"fieldPath":"spec.template.spec.containers[?(@.name==\"eportal-liferay\")].image","pause":"false"}]
+    openshift.io/generated-by: OpenShiftWebConsole
 spec:
   selector:
     matchLabels:
-      app: eportal-liferays-app
+      app: eportal-liferays
   replicas: 1
   template:
     metadata:
-      creationTimestamp: null
       labels:
-        app: eportal-liferays-app
+        app: eportal-liferays
     spec:
       containers:
         - name: eportal-liferays
           image: >-
             image-registry.openshift-image-registry.svc:5000/openshift/httpd:latest
-          
+           ports:
+            - containerPort: 11311
+              protocol: TCP
+            - containerPort: 8000
+              protocol: TCP
+            - containerPort: 8009
+              protocol: TCP
+            - containerPort: 8080
+              protocol: TCP
+            - containerPort: 8081
+              protocol: TCP
+          resources:
+            limits:
+              cpu: 150m
+              memory: 5Gi
+            requests:
+              cpu: 150m
+              memory: 5Gi
+          env: []
+      imagePullSecrets: []
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+  paused: false
