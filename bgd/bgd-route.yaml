@@ -8,7 +8,7 @@ metadata:
     app: bgd
   
 spec:
-  host: "eportal-liferay-eportal.eu-de-3.icp.infineon.com"
+  host: "bgd.apps.go.ocp.redhatworkshops.io"
   port:
     targetPort: 8080
   to:
