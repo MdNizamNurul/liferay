@@ -1,15 +1,107 @@
-apiVersion: v1
 kind: Service
+apiVersion: v1
 metadata:
-  creationTimestamp: null
-  name: bgd
+  name: eportal-liferays
+  namespace: eportal-staging
+  uid: de13ac4b-7dbb-4c63-aaa1-fc306c51d065
+  resourceVersion: '6844444209'
+  creationTimestamp: '2023-08-23T02:46:32Z'
   labels:
-    app: bgd
+    app: eportal-liferays
+    app.kubernetes.io/component: eportal-liferays
+    app.kubernetes.io/instance: eportal-liferays
+    app.kubernetes.io/name: eportal-liferays
+    app.kubernetes.io/part-of: eportal-liferays-app
+  annotations:
+    openshift.io/generated-by: OpenShiftWebConsole
+  managedFields:
+    - manager: Mozilla
+      operation: Update
+      apiVersion: v1
+      time: '2023-08-23T02:46:32Z'
+      fieldsType: FieldsV1
+      fieldsV1:
+        'f:metadata':
+          'f:annotations':
+            .: {}
+            'f:openshift.io/generated-by': {}
+          'f:labels':
+            .: {}
+            'f:app': {}
+            'f:app.kubernetes.io/component': {}
+            'f:app.kubernetes.io/instance': {}
+            'f:app.kubernetes.io/name': {}
+            'f:app.kubernetes.io/part-of': {}
+        'f:spec':
+          'f:internalTrafficPolicy': {}
+          'f:ports':
+            .: {}
+            'k:{"port":8000,"protocol":"TCP"}':
+              .: {}
+              'f:name': {}
+              'f:port': {}
+              'f:protocol': {}
+              'f:targetPort': {}
+            'k:{"port":8009,"protocol":"TCP"}':
+              .: {}
+              'f:name': {}
+              'f:port': {}
+              'f:protocol': {}
+              'f:targetPort': {}
+            'k:{"port":8080,"protocol":"TCP"}':
+              .: {}
+              'f:name': {}
+              'f:port': {}
+              'f:protocol': {}
+              'f:targetPort': {}
+            'k:{"port":8081,"protocol":"TCP"}':
+              .: {}
+              'f:name': {}
+              'f:port': {}
+              'f:protocol': {}
+              'f:targetPort': {}
+            'k:{"port":11311,"protocol":"TCP"}':
+              .: {}
+              'f:name': {}
+              'f:port': {}
+              'f:protocol': {}
+              'f:targetPort': {}
+          'f:selector': {}
+          'f:sessionAffinity': {}
+          'f:type': {}
 spec:
-  selector:
-    app: bgd
+  clusterIP: 10.125.172.182
+  ipFamilies:
+    - IPv4
   ports:
-    - port: 8080
+    - name: 11311-tcp
       protocol: TCP
+      port: 11311
+      targetPort: 11311
+    - name: 8000-tcp
+      protocol: TCP
+      port: 8000
+      targetPort: 8000
+    - name: 8009-tcp
+      protocol: TCP
+      port: 8009
+      targetPort: 8009
+    - name: 8080-tcp
+      protocol: TCP
+      port: 8080
       targetPort: 8080
-      
+    - name: 8081-tcp
+      protocol: TCP
+      port: 8081
+      targetPort: 8081
+  internalTrafficPolicy: Cluster
+  clusterIPs:
+    - 10.125.172.182
+  type: ClusterIP
+  ipFamilyPolicy: SingleStack
+  sessionAffinity: None
+  selector:
+    app: eportal-liferays
+    deployment: eportal-liferays
+status:
+  loadBalancer: {}
