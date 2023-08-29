@@ -3,7 +3,6 @@ apiVersion: v1
 metadata:
   name: eportal-liferays
   namespace: eportal-staging
-  uid: dab494ff-ba74-4db6-9d9e-536f65bb9ce5
   creationTimestamp: '2023-08-29T06:21:42Z'
   labels:
     app: eportal-liferays
