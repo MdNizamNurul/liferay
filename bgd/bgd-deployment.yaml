@@ -1,24 +1,238 @@
-apiVersion: apps/v1
 kind: Deployment
+apiVersion: apps/v1
 metadata:
-  app: bgd
-  name: bgd
+  annotations:
+    alpha.image.policy.openshift.io/resolve-names: '*'
+    app.openshift.io/route-disabled: 'false'
+    deployment.kubernetes.io/revision: '1'
+    image.openshift.io/triggers: >-
+      [{"from":{"kind":"ImageStreamTag","name":"eportal-liferay:latest","namespace":"eportal-build"},"fieldPath":"spec.template.spec.containers[?(@.name==\"eportal-liferay\")].image","pause":"false"}]
+    openshift.io/generated-by: OpenShiftWebConsole
+  resourceVersion: '6886902524'
+  name: eportal-liferays
+  uid: 7f89489d-abb1-45e4-a7a6-560c519ef0d1
+  creationTimestamp: '2023-08-23T02:46:32Z'
+  generation: 52
+  managedFields:
+    - manager: Mozilla
+      operation: Update
+      apiVersion: apps/v1
+      time: '2023-08-28T10:54:01Z'
+      fieldsType: FieldsV1
+      fieldsV1:
+        'f:metadata':
+          'f:annotations':
+            .: {}
+            'f:alpha.image.policy.openshift.io/resolve-names': {}
+            'f:app.openshift.io/route-disabled': {}
+            'f:image.openshift.io/triggers': {}
+            'f:openshift.io/generated-by': {}
+          'f:labels':
+            'f:app.openshift.io/runtime': {}
+            'f:app': {}
+            'f:app.kubernetes.io/name': {}
+            .: {}
+            'f:app.kubernetes.io/part-of': {}
+            'f:app.openshift.io/runtime-version': {}
+            'f:app.openshift.io/runtime-namespace': {}
+            'f:app.kubernetes.io/instance': {}
+            'f:app.kubernetes.io/component': {}
+        'f:spec':
+          'f:progressDeadlineSeconds': {}
+          'f:revisionHistoryLimit': {}
+          'f:selector': {}
+          'f:strategy':
+            'f:rollingUpdate':
+              .: {}
+              'f:maxSurge': {}
+              'f:maxUnavailable': {}
+            'f:type': {}
+          'f:template':
+            'f:metadata':
+              'f:annotations':
+                .: {}
+                'f:openshift.io/generated-by': {}
+              'f:labels':
+                .: {}
+                'f:app': {}
+                'f:deployment': {}
+            'f:spec':
+              'f:containers':
+                'k:{"name":"eportal-liferay"}':
+                  .: {}
+                  'f:image': {}
+                  'f:imagePullPolicy': {}
+                  'f:name': {}
+                  'f:ports':
+                    .: {}
+                    'k:{"containerPort":8000,"protocol":"TCP"}':
+                      .: {}
+                      'f:containerPort': {}
+                      'f:protocol': {}
+                    'k:{"containerPort":8009,"protocol":"TCP"}':
+                      .: {}
+                      'f:containerPort': {}
+                      'f:protocol': {}
+                    'k:{"containerPort":8080,"protocol":"TCP"}':
+                      .: {}
+                      'f:containerPort': {}
+                      'f:protocol': {}
+                    'k:{"containerPort":8081,"protocol":"TCP"}':
+                      .: {}
+                      'f:containerPort': {}
+                      'f:protocol': {}
+                    'k:{"containerPort":11311,"protocol":"TCP"}':
+                      .: {}
+                      'f:containerPort': {}
+                      'f:protocol': {}
+                  'f:resources':
+                    .: {}
+                    'f:limits':
+                      .: {}
+                      'f:cpu': {}
+                      'f:memory': {}
+                    'f:requests':
+                      .: {}
+                      'f:cpu': {}
+                      'f:memory': {}
+                  'f:terminationMessagePath': {}
+                  'f:terminationMessagePolicy': {}
+              'f:dnsPolicy': {}
+              'f:restartPolicy': {}
+              'f:schedulerName': {}
+              'f:securityContext': {}
+              'f:terminationGracePeriodSeconds': {}
+    - manager: kube-controller-manager
+      operation: Update
+      apiVersion: apps/v1
+      time: '2023-08-29T01:40:24Z'
+      fieldsType: FieldsV1
+      fieldsV1:
+        'f:metadata':
+          'f:annotations':
+            'f:deployment.kubernetes.io/revision': {}
+        'f:status':
+          'f:availableReplicas': {}
+          'f:conditions':
+            .: {}
+            'k:{"type":"Available"}':
+              .: {}
+              'f:lastTransitionTime': {}
+              'f:lastUpdateTime': {}
+              'f:message': {}
+              'f:reason': {}
+              'f:status': {}
+              'f:type': {}
+            'k:{"type":"Progressing"}':
+              .: {}
+              'f:lastTransitionTime': {}
+              'f:lastUpdateTime': {}
+              'f:message': {}
+              'f:reason': {}
+              'f:status': {}
+              'f:type': {}
+            'k:{"type":"ReplicaFailure"}':
+              .: {}
+              'f:lastTransitionTime': {}
+              'f:lastUpdateTime': {}
+              'f:message': {}
+              'f:reason': {}
+              'f:status': {}
+              'f:type': {}
+          'f:observedGeneration': {}
+          'f:readyReplicas': {}
+          'f:replicas': {}
+          'f:unavailableReplicas': {}
+          'f:updatedReplicas': {}
+      subresource: status
+  namespace: eportal-staging
+  labels:
+    app: eportal-liferays
+    app.kubernetes.io/component: eportal-liferays
+    app.kubernetes.io/instance: eportal-liferays
+    app.kubernetes.io/name: eportal-liferays
+    app.kubernetes.io/part-of: eportal-liferays-app
+    app.openshift.io/runtime: eportal-liferays
+    app.openshift.io/runtime-namespace: eportal-build
+    app.openshift.io/runtime-version: latest
 spec:
+  replicas: 2
   selector:
     matchLabels:
-      app: bgd
-  replicas: 1
+      app: eportal-liferays
   template:
     metadata:
       creationTimestamp: null
       labels:
-        app: bgd
+        app: eportal-liferays
+        deployment: eportal-liferays
+      annotations:
+        openshift.io/generated-by: OpenShiftWebConsole
     spec:
       containers:
-        - name: bgd
-          image: quay.io/redhatworkshops/bgd:latest
-          env:
-          - name: COLOR
-            value: "blue"
-            resources: {}
-          
+        - name: eportal-liferays
+          image: >-
+            image-registry.openshift-image-registry.svc:5000/eportal-build/eportal-liferay@sha256:1bce3be6ecc914b4cf4ed2ecf83f80757b4b9e48ca541671ef41381c594b6de3
+          ports:
+            - containerPort: 11311
+              protocol: TCP
+            - containerPort: 8000
+              protocol: TCP
+            - containerPort: 8009
+              protocol: TCP
+            - containerPort: 8080
+              protocol: TCP
+            - containerPort: 8081
+              protocol: TCP
+          resources:
+            limits:
+              cpu: 150m
+              memory: 5Gi
+            requests:
+              cpu: 150m
+              memory: 5Gi
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+          imagePullPolicy: IfNotPresent
+      restartPolicy: Always
+      terminationGracePeriodSeconds: 30
+      dnsPolicy: ClusterFirst
+      securityContext: {}
+      schedulerName: default-scheduler
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 25%
+      maxSurge: 25%
+  revisionHistoryLimit: 10
+  progressDeadlineSeconds: 600
+status:
+  observedGeneration: 52
+  replicas: 1
+  updatedReplicas: 1
+  readyReplicas: 1
+  availableReplicas: 1
+  unavailableReplicas: 1
+  conditions:
+    - type: Progressing
+      status: 'True'
+      lastUpdateTime: '2023-08-23T02:46:37Z'
+      lastTransitionTime: '2023-08-23T02:46:32Z'
+      reason: NewReplicaSetAvailable
+      message: ReplicaSet "eportal-liferay-5f44575d89" has successfully progressed.
+    - type: Available
+      status: 'False'
+      lastUpdateTime: '2023-08-29T01:40:24Z'
+      lastTransitionTime: '2023-08-29T01:40:24Z'
+      reason: MinimumReplicasUnavailable
+      message: Deployment does not have minimum availability.
+    - type: ReplicaFailure
+      status: 'True'
+      lastUpdateTime: '2023-08-29T01:40:24Z'
+      lastTransitionTime: '2023-08-29T01:40:24Z'
+      reason: FailedCreate
+      message: >-
+        pods "eportal-liferay-5f44575d89-r2cwv" is forbidden: exceeded quota:
+        ifx-default-quota, requested: limits.memory=5Gi,requests.memory=5Gi,
+        used: limits.memory=5Gi,requests.memory=5Gi, limited:
+        limits.memory=6Gi,requests.memory=6Gi
