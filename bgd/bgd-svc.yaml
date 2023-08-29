@@ -75,7 +75,7 @@ metadata:
               'f:protocol': {}
               'f:targetPort': {}
 spec:
-  clusterIP: 10.125.161.28
+  clusterIP: 
   ipFamilies:
     - IPv4
   ports:
@@ -101,7 +101,7 @@ spec:
       targetPort: 8081
   internalTrafficPolicy: Cluster
   clusterIPs:
-    - 10.125.161.28
+    
   type: ClusterIP
   ipFamilyPolicy: SingleStack
   sessionAffinity: None
