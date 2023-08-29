@@ -1,52 +1,29 @@
-apiVersion: apps/v1
-kind: Deployment
+apiVersion: v1
+kind: Service
 metadata:
+  name: eportal-liferays
   namespace: eportal
-  name: 'eportal-liferays'
-  annotations: 
-    alpha.image.policy.openshift.io/resolve-names: '*'
-    app.openshift.io/route-disabled: 'false'
-    deployment.kubernetes.io/revision: '1'
-    image.openshift.io/triggers: >-
-      [{"from":{"kind":"ImageStreamTag","name":"eportal-liferay:latest","namespace":"eportal-build"},"fieldPath":"spec.template.spec.containers[?(@.name==\"eportal-liferay\")].image","pause":"false"}]
-    openshift.io/generated-by: OpenShiftWebConsole
 spec:
   selector:
-    matchLabels:
-      app: eportal-liferays
-  replicas: 1
-  template:
-    metadata:
-      labels:
-        app: eportal-liferays
-    spec:
-      containers:
-        - name: eportal-liferays
-          image: >-
-            image-registry.openshift-image-registry.svc:5000/openshift/httpd:latest
-           ports:
-            - containerPort: 11311
-              protocol: TCP
-            - containerPort: 8000
-              protocol: TCP
-            - containerPort: 8009
-              protocol: TCP
-            - containerPort: 8080
-              protocol: TCP
-            - containerPort: 8081
-              protocol: TCP
-          resources:
-            limits:
-              cpu: 150m
-              memory: 5Gi
-            requests:
-              cpu: 150m
-              memory: 5Gi
-          env: []
-      imagePullSecrets: []
-  strategy:
-    type: RollingUpdate
-    rollingUpdate:
-      maxSurge: 25%
-      maxUnavailable: 25%
-  paused: false
+    app: eportal-liferays
+  ports:
+    - name: 11311-tcp
+      protocol: TCP
+      port: 11311
+      targetPort: 11311
+    - name: 8000-tcp
+      protocol: TCP
+      port: 8000
+      targetPort: 8000
+    - name: 8009-tcp
+      protocol: TCP
+      port: 8009
+      targetPort: 8009
+    - name: 8080-tcp
+      protocol: TCP
+      port: 8080
+      targetPort: 8080
+    - name: 8081-tcp
+      protocol: TCP
+      port: 8081
+      targetPort: 8081
