@@ -1,16 +1,19 @@
-kind: Route
 apiVersion: route.openshift.io/v1
+kind: Route
 metadata:
   annotations:
     openshift.io/host.generated: 'true'
-  name: eportal-liferays
-  uid: 12e196b4-533f-41f1-9580-398801db5e6b
   creationTimestamp: '2023-08-23T02:46:32Z'
+  finalizers:
+    - icp.infineon.com/jesse
+  labels:
+    app: eportal-liferays
+    app.kubernetes.io/component: eportal-liferays
+    app.kubernetes.io/instance: eportal-liferays
+    app.kubernetes.io/name: eportal-liferays
+    app.kubernetes.io/part-of: eportal-liferays-app
   managedFields:
-    - manager: Mozilla
-      operation: Update
-      apiVersion: route.openshift.io/v1
-      time: '2023-08-23T02:46:32Z'
+    - apiVersion: route.openshift.io/v1
       fieldsType: FieldsV1
       fieldsV1:
         'f:metadata':
@@ -30,10 +33,10 @@ metadata:
             'f:name': {}
             'f:weight': {}
           'f:wildcardPolicy': {}
-    - manager: OpenAPI-Generator
+      manager: Mozilla
       operation: Update
-      apiVersion: route.openshift.io/v1
       time: '2023-08-23T02:46:32Z'
+    - apiVersion: route.openshift.io/v1
       fieldsType: FieldsV1
       fieldsV1:
         'f:metadata':
@@ -42,38 +45,36 @@ metadata:
             'v:"icp.infineon.com/jesse"': {}
         'f:status':
           'f:ingress': {}
+      manager: OpenAPI-Generator
+      operation: Update
       subresource: status
+      time: '2023-08-23T02:46:32Z'
+  name: eportal-liferays
   namespace: eportal-staging
-  finalizers:
-    - icp.infineon.com/jesse
-  labels:
-    app: eportal-liferays
-    app.kubernetes.io/component: eportal-liferays
-    app.kubernetes.io/instance: eportal-liferays
-    app.kubernetes.io/name: eportal-liferays
-    app.kubernetes.io/part-of: eportal-liferays-app
+  resourceVersion: '6860144885'
+  uid: 12e196b4-533f-41f1-9580-398801db5e6b
 spec:
   host: eportal-liferays-eportal-staging.eu-de-3.icp.infineon.com
+  port:
+    targetPort: 8080-tcp
   to:
     kind: Service
     name: eportal-liferays
     weight: 100
-  port:
-    targetPort: 8080-tcp
   wildcardPolicy: None
 status:
   ingress:
-    - host: eportal-liferays-eportal-staging.eu-de-3.icp.infineon.com
-      routerName: default
-      conditions:
-        - type: Admitted
+    - conditions:
+        - lastTransitionTime: '2023-08-23T02:46:32Z'
           status: 'True'
-          lastTransitionTime: '2023-08-23T02:46:32Z'
-        - type: Admitted
-          status: 'True'
-          reason: ClaimedInInfoblox
-          message: >-
+          type: Admitted
+        - message: >-
             eportal-liferays-eportal-staging.eu-de-3.icp.infineon.com successfully
             claimed in Infoblox
-      wildcardPolicy: None
+          reason: ClaimedInInfoblox
+          status: 'True'
+          type: Admitted
+      host: eportal-liferays-eportal-staging.eu-de-3.icp.infineon.com
       routerCanonicalHostname: router-default.eu-de-3.icp.infineon.com
+      routerName: default
+      wildcardPolicy: None
