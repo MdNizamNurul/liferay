@@ -1,0 +1,22 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  creationTimestamp: null
+  namespace: eportal-staging
+  name: bgd
+  labels: 
+    app: bgd
+  
+spec:
+  host: "eportal-liferay-eportal.eu-de-3.icp.infineon.com"
+  port:
+    targetPort: 8080
+  to:
+    kind: Service
+    name: bgd
+    weight: 100
+status:
+  ingress:
+  - conditions:
+    - status: "True"
+      type: Admitted
