@@ -149,7 +149,7 @@ metadata:
     app.kubernetes.io/instance: eportal-liferays
     app.kubernetes.io/name: eportal-liferays
     app.kubernetes.io/part-of: liferay-eportal-liferays
-    app.openshift.io/runtime: eportal-liferay
+    app.openshift.io/runtime: eportal-liferays
     app.openshift.io/runtime-namespace: eportal-build
     app.openshift.io/runtime-version: latest
 spec:
