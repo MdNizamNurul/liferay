@@ -5,9 +5,12 @@ metadata:
   namespace: eportal
   name: eportal-liferays
   labels: 
-    app: eportal-liferays-app
-  
-spec:
+    app: eportal-liferay
+    app.kubernetes.io/component: eportal-liferay
+    app.kubernetes.io/instance: eportal-liferay
+    app.kubernetes.io/name: eportal-liferay
+    app.kubernetes.io/part-of: eportal-liferay-app
+  spec:
   host: "eportal-liferays-eportal.eu-de-3.icp.infineon.com"
   port:
     targetPort: 8080
