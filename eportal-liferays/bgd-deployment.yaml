@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  app: bgd
-  name: bgd
+  app: eportal-liferays-app
+  name: eportal-liferays
 spec:
   selector:
     matchLabels:
-      app: bgd
+      app: eportal-liferays-app
   replicas: 1
   template:
     metadata:
       creationTimestamp: null
       labels:
-        app: bgd
+        app: eportal-liferays-app
     spec:
       containers:
-        - name: bgd
+        - name: eportal-liferays
           image: >-
             image-registry.openshift-image-registry.svc:5000/openshift/httpd:latest
           
