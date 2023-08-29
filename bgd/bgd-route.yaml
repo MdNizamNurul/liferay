@@ -54,7 +54,7 @@ metadata:
     app.kubernetes.io/name: eportal-liferays
     app.kubernetes.io/part-of: eportal-liferays-app
 spec:
-  host: eportal-liferay-eportal.eu-de-3.icp.infineon.com
+  host: eportal-liferays-eportal-staging.eu-de-3.icp.infineon.com
   to:
     kind: Service
     name: eportal-liferays
@@ -64,7 +64,7 @@ spec:
   wildcardPolicy: None
 status:
   ingress:
-    - host: eportal-liferay-eportal.eu-de-3.icp.infineon.com
+    - host: eportal-liferays-eportal-staging.eu-de-3.icp.infineon.com
       routerName: default
       conditions:
         - type: Admitted
@@ -74,7 +74,7 @@ status:
           status: 'True'
           reason: ClaimedInInfoblox
           message: >-
-            eportal-liferay-eportal.eu-de-3.icp.infineon.com successfully
+            eportal-liferays-eportal-staging.eu-de-3.icp.infineon.com successfully
             claimed in Infoblox
       wildcardPolicy: None
       routerCanonicalHostname: router-default.eu-de-3.icp.infineon.com
