@@ -106,7 +106,7 @@ spec:
   ipFamilyPolicy: SingleStack
   sessionAffinity: None
   selector:
-    app: liferaytest
-    deployment: liferaytest
+    app: eportal-liferays
+    deployment: eportal-liferays
 status:
   loadBalancer: {}
