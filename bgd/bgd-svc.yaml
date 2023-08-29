@@ -70,7 +70,7 @@ metadata:
           'f:sessionAffinity': {}
           'f:type': {}
 spec:
-  clusterIP: 10.125.172.182
+  clusterIP: 
   ipFamilies:
     - IPv4
   ports:
@@ -96,7 +96,7 @@ spec:
       targetPort: 8081
   internalTrafficPolicy: Cluster
   clusterIPs:
-    - 10.125.172.182
+    
   type: ClusterIP
   ipFamilyPolicy: SingleStack
   sessionAffinity: None
