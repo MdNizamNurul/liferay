@@ -73,7 +73,7 @@ status:
           status: 'True'
           reason: ClaimedInInfoblox
           message: >-
-            eportal-liferay-eportal-staging.eu-de-3.icp.infineon.com successfully
+            eportal-liferays-eportal-staging.eu-de-3.icp.infineon.com successfully
             claimed in Infoblox
       wildcardPolicy: None
       routerCanonicalHostname: router-default.eu-de-3.icp.infineon.com
