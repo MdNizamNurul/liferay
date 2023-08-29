@@ -14,9 +14,9 @@ metadata:
       \"liferaytest-79d6f6c989\" has successfully
       progressed.","reason":"NewReplicaSetAvailable","status":"True","type":"Progressing"}],"observedGeneration":1,"readyReplicas":2,"replicas":2,"updatedReplicas":2}}
     openshift.io/generated-by: OpenShiftWebConsole
-  resourceVersion: '6888276322'
+
   name: eportal-liferays
-  uid: 4147a0ee-237c-4754-8415-66104b58d502
+
   creationTimestamp: '2023-08-29T06:21:42Z'
   generation: 2
   managedFields:
