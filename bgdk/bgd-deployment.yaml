@@ -15,7 +15,7 @@ metadata:
       progressed.","reason":"NewReplicaSetAvailable","status":"True","type":"Progressing"}],"observedGeneration":1,"readyReplicas":2,"replicas":2,"updatedReplicas":2}}
     openshift.io/generated-by: OpenShiftWebConsole
 
-  name: eportal-liferays
+  name: eportal-liferays-prod
 
   creationTimestamp: '2023-08-29T06:21:42Z'
   generation: 1
@@ -144,30 +144,30 @@ metadata:
       subresource: status
   namespace: eportal-staging
   labels:
-    app: eportal-liferays
-    app.kubernetes.io/component: eportal-liferays
-    app.kubernetes.io/instance: eportal-liferays
-    app.kubernetes.io/name: eportal-liferays
-    app.kubernetes.io/part-of: eportal-liferays
-    app.openshift.io/runtime: eportal-liferays
+    app: eportal-liferays-prod
+    app.kubernetes.io/component: eportal-liferays-prod
+    app.kubernetes.io/instance: eportal-liferays-prod
+    app.kubernetes.io/name: eportal-liferays-prod
+    app.kubernetes.io/part-of: eportal-liferays-prod
+    app.openshift.io/runtime: eportal-liferays-prod
     app.openshift.io/runtime-namespace: eportal-build
     app.openshift.io/runtime-version: latest
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: eportal-liferays
+      app: eportal-liferays-prod
   template:
     metadata:
       creationTimestamp: null
       labels:
-        app: eportal-liferays
-        deployment: eportal-liferays
+        app: eportal-liferays-prod
+        deployment: eportal-liferays-prod
       annotations:
         openshift.io/generated-by: OpenShiftWebConsole
     spec:
       containers:
-        - name: eportal-liferays
+        - name: eportal-liferays-prod
           image: >-
             image-registry.openshift-image-registry.svc:5000/eportal-build/eportal-liferay@sha256:1bce3be6ecc914b4cf4ed2ecf83f80757b4b9e48ca541671ef41381c594b6de3
           ports:
