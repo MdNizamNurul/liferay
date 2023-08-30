@@ -13,5 +13,5 @@ commonLabels:
   app.openshift.io/runtime-version: latest
 
  selector:
-    app: eportal-liferays
-    deployment: eportal-liferays
+    app: eportal-liferays-prod
+    deployment: eportal-liferays-prod
