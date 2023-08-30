@@ -144,7 +144,7 @@ metadata:
       subresource: status
   namespace: eportal-staging
 spec:
-  replicas: 2
+  replicas: 1
   template:
     metadata:
       creationTimestamp: null
