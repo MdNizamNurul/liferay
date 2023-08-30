@@ -1,14 +1,14 @@
 resources:
-- deployment.yaml
-- service.yaml
+- bgd-deployment.yaml
+- bgd-service.yaml
 
 commonLabels:
-  app: eportal-liferays
-  app.kubernetes.io/component: eportal-liferays
-  app.kubernetes.io/instance: eportal-liferays
-  app.kubernetes.io/name: eportal-liferays
-  app.kubernetes.io/part-of: eportal-liferays
-  app.openshift.io/runtime: eportal-liferays
+  app: eportal-liferays-prod
+  app.kubernetes.io/component: eportal-liferays-prod
+  app.kubernetes.io/instance: eportal-liferays-prod
+  app.kubernetes.io/name: eportal-liferays-prod
+  app.kubernetes.io/part-of: eportal-liferays-prod
+  app.openshift.io/runtime: eportal-liferays-prod
   app.openshift.io/runtime-namespace: eportal-build
   app.openshift.io/runtime-version: latest
 
