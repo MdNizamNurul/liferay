@@ -111,7 +111,110 @@ metadata:
               'f:schedulerName': {}
               'f:securityContext': {}
               'f:terminationGracePeriodSeconds': {}
-    - manager: kube-controller-manager
+  - manager: openshift-controller-manager
+    operation: Update
+    apiVersion: apps/v1
+    time: '2023-07-10T15:02:16Z'
+    fieldsType: FieldsV1
+       fieldsV1:
+         'f:spec':
+           'f:template':
+             'f:spec':
+               'f:containers':
+                 'k:{"name":"liferay"}':
+                   'f:image': {}
+  - manager: Mozilla
+      operation: Update
+      apiVersion: apps/v1
+      time: '2023-09-01T04:45:15Z'
+      fieldsType: FieldsV1
+      fieldsV1:
+        'f:metadata':
+          'f:annotations':
+            .: {}
+            'f:alpha.image.policy.openshift.io/resolve-names': {}
+            'f:app.openshift.io/route-disabled': {}
+            'f:image.openshift.io/triggers': {}
+            'f:openshift.io/generated-by': {}
+          'f:labels':
+            .: {}
+            'f:app': {}
+            'f:app.kubernetes.io/component': {}
+            'f:app.kubernetes.io/name': {}
+            'f:app.kubernetes.io/part-of': {}
+            'f:app.openshift.io/runtime': {}
+            'f:app.openshift.io/runtime-namespace': {}
+            'f:app.openshift.io/runtime-version': {}
+        'f:spec':
+          'f:progressDeadlineSeconds': {}
+          'f:revisionHistoryLimit': {}
+          'f:selector': {}
+          'f:strategy':
+            'f:rollingUpdate':
+              .: {}
+              'f:maxSurge': {}
+              'f:maxUnavailable': {}
+            'f:type': {}
+          'f:template':
+            'f:metadata':
+              'f:annotations':
+                .: {}
+                'f:openshift.io/generated-by': {}
+              'f:labels':
+                .: {}
+                'f:app': {}
+                'f:deployment': {}
+            'f:spec':
+              'f:affinity':
+                .: {}
+                'f:podAntiAffinity':
+                  .: {}
+                  'f:preferredDuringSchedulingIgnoredDuringExecution': {}
+              'f:containers':
+                'k:{"name":"liferay"}':
+                  .: {}
+                  'f:imagePullPolicy': {}
+                  'f:name': {}
+                  'f:ports':
+                    .: {}
+                    'k:{"containerPort":8000,"protocol":"TCP"}':
+                      .: {}
+                      'f:containerPort': {}
+                      'f:protocol': {}
+                    'k:{"containerPort":8009,"protocol":"TCP"}':
+                      .: {}
+                      'f:containerPort': {}
+                      'f:protocol': {}
+                    'k:{"containerPort":8080,"protocol":"TCP"}':
+                      .: {}
+                      'f:containerPort': {}
+                      'f:protocol': {}
+                    'k:{"containerPort":8081,"protocol":"TCP"}':
+                      .: {}
+                      'f:containerPort': {}
+                      'f:protocol': {}
+                    'k:{"containerPort":11311,"protocol":"TCP"}':
+                      .: {}
+                      'f:containerPort': {}
+                      'f:protocol': {}
+                  'f:resources':
+                    .: {}
+                    'f:limits':
+                      .: {}
+                      'f:cpu': {}
+                      'f:memory': {}
+                    'f:requests':
+                      .: {}
+                      'f:cpu': {}
+                      'f:memory': {}
+                  'f:terminationMessagePath': {}
+                  'f:terminationMessagePolicy': {}
+              'f:dnsPolicy': {}
+              'f:restartPolicy': {}
+              'f:schedulerName': {}
+              'f:securityContext': {}
+              'f:terminationGracePeriodSeconds': {}
+  - manager: kube-controller-manager
       operation: Update
       apiVersion: apps/v1
       time: '2023-08-29T06:21:47Z'
