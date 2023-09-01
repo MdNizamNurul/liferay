@@ -11,7 +11,7 @@ metadata:
   creationTimestamp: '2023-08-30T08:39:26Z'
   name: eportal-liferays-prod   
   namespace: eportal-staging
-  resourceVersion: '6908696701'
+  resourceVersion: '6908700458'
   uid: c8c9e87c-c2ff-4f0b-87ed-a1874646a86e
 spec:
   clusterIP: 
