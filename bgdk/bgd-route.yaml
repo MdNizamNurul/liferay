@@ -4,7 +4,6 @@ metadata:
   annotations:
     openshift.io/host.generated: 'true'
   name: eportal-liferays-prod
-  uid: 12e196b4-533f-41f1-9580-398801db5e6b
   creationTimestamp: '2023-08-23T02:46:32Z'
   managedFields:
     - manager: Mozilla
