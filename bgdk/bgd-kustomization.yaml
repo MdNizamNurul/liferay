@@ -12,3 +12,7 @@ commonLabels:
   app.openshift.io/runtime-namespace: eportal-build
   app.openshift.io/runtime-version: latest
 
+  selector:
+    matchLabels:
+      app: eportal-liferays-prod
+      deployment: eportal-liferays-prod
