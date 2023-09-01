@@ -147,7 +147,7 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: eportal-liferays
+      app: eportal-liferays-prod
   template:
     metadata:
       creationTimestamp: null
