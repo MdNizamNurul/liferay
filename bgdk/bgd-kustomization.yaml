@@ -1,0 +1,13 @@
+resources:
+- bgd-deployment.yaml
+- bgd-svc.yaml
+
+labels:
+  app: eportal-liferays-prod
+  app.kubernetes.io/component: eportal-liferays-prod
+  app.kubernetes.io/instance: eportal-liferays-prod
+  app.kubernetes.io/name: eportal-liferays-prod
+  app.kubernetes.io/part-of: eportal-liferays-prod
+  app.openshift.io/runtime: eportal-liferays-prod
+  app.openshift.io/runtime-namespace: eportal-build
+  app.openshift.io/runtime-version: latest
