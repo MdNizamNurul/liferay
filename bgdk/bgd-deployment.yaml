@@ -145,6 +145,9 @@ metadata:
   namespace: eportal-staging
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      app: eportal-liferays-prod
   template:
     metadata:
       creationTimestamp: null
