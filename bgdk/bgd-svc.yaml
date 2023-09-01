@@ -99,8 +99,5 @@ spec:
   type: ClusterIP
   ipFamilyPolicy: SingleStack
   sessionAffinity: None
-  selector:
-    app: eportal-liferays-prod
-    deployment: eportal-liferays-prod
 status:
   loadBalancer: {}
