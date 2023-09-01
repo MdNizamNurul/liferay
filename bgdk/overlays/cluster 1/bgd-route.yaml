@@ -1,12 +1,62 @@
-apiVersion: route.openshift.io/v1
 kind: Route
+apiVersion: route.openshift.io/v1
 metadata:
   name: eportal-liferays-prod
-  resourceVersion: '6910297126'
+  namespace: eportal-staging
+  uid: 5e26fa53-2a8d-4931-8b90-265f262ef095
+  resourceVersion: '6910313620'
+  creationTimestamp: '2023-09-01T07:53:31Z'
+  finalizers:
+    - icp.infineon.com/jesse
+  managedFields:
+    - manager: Mozilla
+      operation: Update
+      apiVersion: route.openshift.io/v1
+      time: '2023-08-23T02:46:32Z'
+      fieldsType: FieldsV1
+      fieldsV1:
+        'f:spec':
+          'f:port':
+            .: {}
+            'f:targetPort': {}
+          'f:to':
+            'f:kind': {}
+            'f:name': {}
+            'f:weight': {}
+          'f:wildcardPolicy': {}
+    - manager: OpenAPI-Generator
+      operation: Update
+      apiVersion: route.openshift.io/v1
+      time: '2023-09-01T09:54:18Z'
+      fieldsType: FieldsV1
+      fieldsV1:
+        'f:metadata':
+          'f:finalizers':
+            .: {}
+            'v:"icp.infineon.com/jesse"': {}
+      subresource: status
 spec:
   host: eportal-liferays-prod-eportal-staging.eu-de-3.icp.infineon.com
   to:
     kind: Service
     name: eportal-liferays-prod
+    weight: 100
   port:
     targetPort: 8080-tcp
+  wildcardPolicy: None
+status:
+  ingress:
+    - host: eportal-liferays-prod-eportal-staging.eu-de-3.icp.infineon.com
+      routerName: default
+      conditions:
+        - type: Admitted
+          status: 'True'
+          lastTransitionTime: '2023-09-01T07:53:31Z'
+        - type: Admitted
+          status: 'True'
+          reason: ClaimedInInfoblox
+          message: >-
+            eportal-liferays-prod-eportal-staging.eu-de-3.icp.infineon.com
+            successfully claimed in Infoblox
+      wildcardPolicy: None
+      routerCanonicalHostname: router-default.eu-de-3.icp.infineon.com
