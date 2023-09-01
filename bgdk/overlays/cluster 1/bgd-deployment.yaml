@@ -1,0 +1,9 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: eportal-liferays-prod
+spec:
+  template:
+    spec:
+      containers:
+      - name: eportal-liferays-prod
