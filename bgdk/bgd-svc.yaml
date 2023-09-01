@@ -1,5 +1,5 @@
-kind: Service
 apiVersion: v1
+kind: Service
 metadata:
   annotations:
     idling.alpha.openshift.io/idled-at: '2023-08-30T19:00:32Z'
