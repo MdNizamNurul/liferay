@@ -147,10 +147,7 @@ spec:
   replicas: 1
   template:
     metadata:
-      creationTimestamp: null
-      labels:
-        app: eportal-liferays-prod
-        deployment: eportal-liferays-prod
+      creationTimestamp: null    
       annotations:
         openshift.io/generated-by: OpenShiftWebConsole
     spec:
