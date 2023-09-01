@@ -2,7 +2,7 @@ apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
   name: eportal-liferays-prod
-  resourceVersion: '6909780250'
+  resourceVersion: '6910297126'
 spec:
   host: eportal-liferays-prod-eportal-staging.eu-de-3.icp.infineon.com
   to:
