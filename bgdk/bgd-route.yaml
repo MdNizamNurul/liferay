@@ -3,7 +3,8 @@ apiVersion: route.openshift.io/v1
 metadata:
   annotations:
     openshift.io/host.generated: 'true'
-
+  resourceVersion: '6909744486'
+  uid: 5e26fa53-2a8d-4931-8b90-265f262ef095
   name: eportal-liferays-prod
   creationTimestamp: '2023-08-23T02:46:32Z'
   managedFields:
