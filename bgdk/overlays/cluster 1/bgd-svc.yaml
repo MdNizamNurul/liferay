@@ -4,7 +4,7 @@ metadata:
   name: eportal-liferays-prod
   namespace: eportal-staging
   uid: d62c8bfb-07de-4f57-a221-bb9167448520
-  resourceVersion: '6929981461'
+  resourceVersion: '6930012751'
   creationTimestamp: '2023-09-04T08:20:57Z'
   labels:
     app: eportal-liferays
