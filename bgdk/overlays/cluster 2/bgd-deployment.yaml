@@ -1,9 +1,42 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: eportal-liferays-prod
+  namespace: eportal-staging
+  name: eportal-liferays
 spec:
+  selector:
+    matchLabels:
+      app: eportal-liferays
+  replicas: 1
   template:
+    metadata:
+      labels:
+        app: eportal-liferays
     spec:
       containers:
-      - name: eportal-liferays-prod
+        - name: eportal-liferays
+          image: >-
+            image-registry.openshift-image-registry.svc:5000/eportal-build/eportal-liferay@sha256:1bce3be6ecc914b4cf4ed2ecf83f80757b4b9e48ca541671ef41381c594b6de3
+          ports:
+            - containerPort: 11311
+              protocol: TCP
+            - containerPort: 8000
+              protocol: TCP
+            - containerPort: 8009
+              protocol: TCP
+            - containerPort: 8080
+              protocol: TCP
+            - containerPort: 8081
+              protocol: TCP
+          resources:
+            limits:
+              cpu: 150m
+              memory: 5Gi
+            requests:
+              cpu: 150m
+              memory: 5Gi
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
