@@ -3,30 +3,25 @@ apiVersion: v1
 metadata:
   name: eportal-liferays-prod
   namespace: eportal-staging
-  uid: d62c8bfb-07de-4f57-a221-bb9167448520
-  resourceVersion: '6930024251'
-  creationTimestamp: '2023-09-04T08:20:57Z'
+  creationTimestamp: '2023-07-18T08:55:41Z'
   labels:
-    app: eportal-liferays
+    app: eportal-liferays-prod
     app.kubernetes.io/component: eportal-liferays-prod
     app.kubernetes.io/instance: eportal-liferays-prod
     app.kubernetes.io/name: eportal-liferays-prod
-    app.kubernetes.io/part-of: eportal-liferays-prod
+    app.kubernetes.io/part-of: eportal-liferays-prod-app
   annotations:
-    kubectl.kubernetes.io/last-applied-configuration: >
-      {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{"openshift.io/generated-by":"OpenShiftWebConsole"},"creationTimestamp":"2023-08-29T06:21:42Z","labels":{"app":"eportal-liferays","app.kubernetes.io/component":"eportal-liferays-prod","app.kubernetes.io/instance":"eportal-liferays-prod","app.kubernetes.io/name":"eportal-liferays-prod","app.kubernetes.io/part-of":"eportal-liferays-prod"},"managedFields":[{"apiVersion":"v1","fieldsType":"FieldsV1","fieldsV1":{"f:metadata":{"f:annotations":{".":{},"f:kubectl.kubernetes.io/last-applied-configuration":{},"f:openshift.io/generated-by":{}},"f:labels":{".":{},"f:app":{},"f:app.kubernetes.io/component":{},"f:app.kubernetes.io/instance":{},"f:app.kubernetes.io/name":{},"f:app.kubernetes.io/part-of":{}}},"f:spec":{"f:clusterIP":{},"f:clusterIPs":{},"f:internalTrafficPolicy":{},"f:ipFamilies":{},"f:ipFamilyPolicy":{},"f:ports":{".":{},"k:{\"port\":11311,\"protocol\":\"TCP\"}":{".":{},"f:name":{},"f:port":{},"f:protocol":{},"f:targetPort":{}},"k:{\"port\":8000,\"protocol\":\"TCP\"}":{".":{},"f:name":{},"f:port":{},"f:protocol":{},"f:targetPort":{}},"k:{\"port\":8009,\"protocol\":\"TCP\"}":{".":{},"f:name":{},"f:port":{},"f:protocol":{},"f:targetPort":{}},"k:{\"port\":8080,\"protocol\":\"TCP\"}":{".":{},"f:name":{},"f:port":{},"f:protocol":{},"f:targetPort":{}},"k:{\"port\":8081,\"protocol\":\"TCP\"}":{".":{},"f:name":{},"f:port":{},"f:protocol":{},"f:targetPort":{}}},"f:selector":{},"f:sessionAffinity":{},"f:type":{}}},"manager":"argocd-controller","operation":"Update","time":"2023-08-29T06:21:42Z"}],"name":"eportal-liferays-prod","namespace":"eportal-staging"},"spec":{"clusterIP":null,"clusterIPs":null,"internalTrafficPolicy":"Cluster","ipFamilies":["IPv4"],"ipFamilyPolicy":"SingleStack","ports":[{"name":"11311-tcp","port":11311,"protocol":"TCP","targetPort":11311},{"name":"8000-tcp","port":8000,"protocol":"TCP","targetPort":8000},{"name":"8009-tcp","port":8009,"protocol":"TCP","targetPort":8009},{"name":"8080-tcp","port":8080,"protocol":"TCP","targetPort":8080},{"name":"8081-tcp","port":8081,"protocol":"TCP","targetPort":8081}],"selector":{"app":"eportal-liferays-prod","deployment":"eportal-liferays-prod"},"sessionAffinity":"None","type":"ClusterIP"},"status":{"loadBalancer":{}}}
     openshift.io/generated-by: OpenShiftWebConsole
   managedFields:
-    - manager: argocd-controller
+    - manager: Mozilla
       operation: Update
       apiVersion: v1
-      time: '2023-08-29T06:21:42Z'
+      time: '2023-07-18T08:55:41Z'
       fieldsType: FieldsV1
       fieldsV1:
         'f:metadata':
           'f:annotations':
             .: {}
-            'f:kubectl.kubernetes.io/last-applied-configuration': {}
             'f:openshift.io/generated-by': {}
           'f:labels':
             .: {}
@@ -37,8 +32,6 @@ metadata:
             'f:app.kubernetes.io/part-of': {}
         'f:spec':
           'f:internalTrafficPolicy': {}
-          'f:ipFamilies': {}
-          'f:ipFamilyPolicy': {}
           'f:ports':
             .: {}
             'k:{"port":8000,"protocol":"TCP"}':
@@ -75,7 +68,7 @@ metadata:
           'f:sessionAffinity': {}
           'f:type': {}
 spec:
-  clusterIP: 10.125.146.69
+  clusterIP: 
   ipFamilies:
     - IPv4
   ports:
@@ -101,7 +94,7 @@ spec:
       targetPort: 8081
   internalTrafficPolicy: Cluster
   clusterIPs:
-    - 10.125.146.69
+    
   type: ClusterIP
   ipFamilyPolicy: SingleStack
   sessionAffinity: None
