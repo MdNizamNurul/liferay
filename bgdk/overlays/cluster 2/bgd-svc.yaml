@@ -15,58 +15,16 @@ metadata:
   managedFields:
     - manager: Mozilla
       operation: Update
-      apiVersion: v1
       time: '2023-07-18T08:55:41Z'
+    - apiVersion: v1
       fieldsType: FieldsV1
       fieldsV1:
         'f:metadata':
           'f:annotations':
-            .: {}
-            'f:openshift.io/generated-by': {}
-          'f:labels':
-            .: {}
-            'f:app': {}
-            'f:app.kubernetes.io/component': {}
-            'f:app.kubernetes.io/instance': {}
-            'f:app.kubernetes.io/name': {}
-            'f:app.kubernetes.io/part-of': {}
-        'f:spec':
-          'f:internalTrafficPolicy': {}
-          'f:ports':
-            .: {}
-            'k:{"port":8000,"protocol":"TCP"}':
-              .: {}
-              'f:name': {}
-              'f:port': {}
-              'f:protocol': {}
-              'f:targetPort': {}
-            'k:{"port":8009,"protocol":"TCP"}':
-              .: {}
-              'f:name': {}
-              'f:port': {}
-              'f:protocol': {}
-              'f:targetPort': {}
-            'k:{"port":8080,"protocol":"TCP"}':
-              .: {}
-              'f:name': {}
-              'f:port': {}
-              'f:protocol': {}
-              'f:targetPort': {}
-            'k:{"port":8081,"protocol":"TCP"}':
-              .: {}
-              'f:name': {}
-              'f:port': {}
-              'f:protocol': {}
-              'f:targetPort': {}
-            'k:{"port":11311,"protocol":"TCP"}':
-              .: {}
-              'f:name': {}
-              'f:port': {}
-              'f:protocol': {}
-              'f:targetPort': {}
-          'f:selector': {}
-          'f:sessionAffinity': {}
-          'f:type': {}
+            'f:kubectl.kubernetes.io/last-applied-configuration': {}	
+      manager: argocd-controller	
+      operation: Update	
+      time: '2023-09-04T09:08:00Z'
 spec:
   clusterIP: 
   ipFamilies:
