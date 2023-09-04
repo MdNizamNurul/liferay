@@ -4,7 +4,7 @@ metadata:
   annotations:
     kubectl.kubernetes.io/last-applied-configuration: >
       {"apiVersion":"route.openshift.io/v1","kind":"Route","metadata":{"annotations":{},"labels":{"app.kubernetes.io/instance":"eportal-liferays-prod"},"name":"eportal-liferays-prod","namespace":"eportal-staging","resourceVersion":"6929961986"},"spec":{"host":"eportal-liferays-prod-eportal-staging.eu-de-3.icp.infineon.com","port":{"targetPort":"8080-tcp"},"to":{"kind":"Service","name":"eportal-liferays-prod"}}}
-  resourceVersion: '6929981466'
+  resourceVersion: '6930005385'
   name: eportal-liferays-prod
   uid: 5e26fa53-2a8d-4931-8b90-265f262ef095
   creationTimestamp: '2023-09-01T07:53:31Z'
