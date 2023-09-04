@@ -75,6 +75,9 @@ metadata:
               'f:protocol': {}
               'f:targetPort': {}
 spec:
+  selector:
+    matchLabels:
+      app: eportal-liferays-prod
   clusterIP: 
   ipFamilies:
     - IPv4
