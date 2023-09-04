@@ -4,7 +4,7 @@ metadata:
   name: eportal-liferays-prod
   namespace: eportal-staging
   uid: 5e26fa53-2a8d-4931-8b90-265f262ef095
-  resourceVersion: '6910374326'
+  resourceVersion: '6910390744'
   creationTimestamp: '2023-09-01T07:53:31Z'
   finalizers:
     - icp.infineon.com/jesse
