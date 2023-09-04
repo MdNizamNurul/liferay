@@ -21,7 +21,7 @@ metadata:
       fieldsV1:
         'f:metadata':
           'f:annotations':
-            '.: {}	
+            .: {}	
             'f:openshift.io/generated-by': {}	
           'f:labels':	
             .: {}	
