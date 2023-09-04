@@ -4,26 +4,11 @@ metadata:
   name: eportal-liferays-prod
   namespace: eportal-staging
   uid: 5e26fa53-2a8d-4931-8b90-265f262ef095
-  resourceVersion: '6910390744'
+  resourceVersion: '6929412911'
   creationTimestamp: '2023-09-01T07:53:31Z'
   finalizers:
     - icp.infineon.com/jesse
-  managedFields:
-    - manager: Mozilla
-      operation: Update
-      apiVersion: route.openshift.io/v1
-      time: '2023-08-23T02:46:32Z'
-      fieldsType: FieldsV1
-      fieldsV1:
-        'f:spec':
-          'f:port':
-            .: {}
-            'f:targetPort': {}
-          'f:to':
-            'f:kind': {}
-            'f:name': {}
-            'f:weight': {}
-          'f:wildcardPolicy': {}
+
     - manager: OpenAPI-Generator
       operation: Update
       apiVersion: route.openshift.io/v1
