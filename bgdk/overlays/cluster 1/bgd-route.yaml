@@ -3,6 +3,7 @@ kind: Route
 metadata:
   name: eportal-liferays-prod
   resourceVersion: '6929961986'
+  uid: 5e26fa53-2a8d-4931-8b90-265f262ef095
 spec:
   host: eportal-liferays-prod-eportal-staging.eu-de-3.icp.infineon.com
   to:
