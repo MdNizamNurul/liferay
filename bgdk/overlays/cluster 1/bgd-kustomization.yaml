@@ -1,6 +1,6 @@
 resources:
-- bgd-deployment.yaml
-- bgd-svc.yaml
+- deployment.yaml
+- service.yaml
 
 labels:
   app: eportal-liferays-prod
