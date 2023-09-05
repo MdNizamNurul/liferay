@@ -11,3 +11,6 @@ commonLabels:
   app.openshift.io/runtime: liferay-prod
   app.openshift.io/runtime-namespace: eportal-build
   app.openshift.io/runtime-version: latest
+
+spec:
+  replicas:
