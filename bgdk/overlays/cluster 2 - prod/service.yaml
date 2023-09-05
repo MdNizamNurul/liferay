@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: liferay-prod
+  name: liferays-prod
   namespace: eportal
 spec:
   selector:
-    app: liferay-prod
+    app: liferays-prod
   ports:
     - name: 11311-tcp
       protocol: TCP
