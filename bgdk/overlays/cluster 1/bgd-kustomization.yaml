@@ -12,4 +12,6 @@ labels:
   app.openshift.io/runtime-namespace: eportal-build
   app.openshift.io/runtime-version: latest
 
-
+images:
+- name: anaisurlichs/react-example-app
+  newTag: 1.0.0
