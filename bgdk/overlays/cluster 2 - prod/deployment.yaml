@@ -2,19 +2,19 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   namespace: eportal
-  name: liferay-prod
+  name: liferays-prod
 spec:
   selector:
     matchLabels:
-      app: liferay-prod
+      app: liferays-prod
   replicas: 1
   template:
     metadata:
       labels:
-        app: liferay-prod
+        app: liferays-prod
     spec:
       containers:
-        - name: liferay-prod
+        - name: liferays-prod
           image: >-
             image-registry.openshift-image-registry.svc:5000/eportal-build/eportal-liferay@sha256:1bce3be6ecc914b4cf4ed2ecf83f80757b4b9e48ca541671ef41381c594b6de3
           ports:
