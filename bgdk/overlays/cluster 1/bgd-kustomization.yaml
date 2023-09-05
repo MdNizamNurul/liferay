@@ -12,5 +12,4 @@ labels:
   app.openshift.io/runtime-namespace: eportal-build
   app.openshift.io/runtime-version: latest
 
-spec:
-  replicas: 2
+
