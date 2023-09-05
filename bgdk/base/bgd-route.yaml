@@ -3,7 +3,7 @@ kind: Route
 metadata:
   name: liferay
 spec:
-  host: liferay-eportal.eu-de-3.icp.infineon.com
+  host: ""
   to:
     kind: Service
     name: liferay
