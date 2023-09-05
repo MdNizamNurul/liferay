@@ -2,7 +2,7 @@ resources:
 - deployment.yaml
 - service.yaml
 
-labels:
+commonLabels:
   app: liferay-prod
   app.kubernetes.io/component: liferay-prod
   app.kubernetes.io/instance: liferay-prod
