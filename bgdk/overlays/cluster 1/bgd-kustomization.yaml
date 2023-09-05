@@ -1,7 +1,6 @@
 resources:
-- liferay/bgdk/base/bgd-svc.yaml
 - liferay/bgdk/base/bgd-deployment.yaml
-
+- liferay/bgdk/base/bgd-svc.yaml
 
 labels:
   app: eportal-liferays-prod
