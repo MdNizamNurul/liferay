@@ -142,9 +142,9 @@ metadata:
           'f:replicas': {}
           'f:updatedReplicas': {}
       subresource: status
-  namespace: eportal
+  namespace: eportal-staging
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: liferay
