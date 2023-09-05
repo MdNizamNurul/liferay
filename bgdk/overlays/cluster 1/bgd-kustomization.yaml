@@ -14,4 +14,4 @@ labels:
 
 images:
 - name: anaisurlichs/react-example-app
-  newTag: 1.0.0
+  newTag: 2.0.0
