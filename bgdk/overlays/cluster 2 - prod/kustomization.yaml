@@ -1,6 +1,6 @@
 resources:
-- bgdk/base/bgd-deployment.yaml
-- bgdk/base/bgd-service.yaml
+- liferay/bgdk/base/bgd-deployment.yaml
+- liferay/bgdk/base/bgd-service.yaml
 
 commonLabels:
   app: liferays-prod
