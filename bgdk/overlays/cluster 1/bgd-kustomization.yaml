@@ -1,6 +1,7 @@
 resources:
-- bgd-svc.yaml
 - bgd-deployment.yaml
+- bgd-svc.yaml
+
 
 
 labels:
