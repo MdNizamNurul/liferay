@@ -13,4 +13,4 @@ commonLabels:
   app.openshift.io/runtime-version: latest
 
 spec:
-  replicas:
+  replicas:1
