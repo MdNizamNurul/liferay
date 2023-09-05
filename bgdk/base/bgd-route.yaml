@@ -1,11 +1,11 @@
 apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
-  name: eportal-liferays-prod
+  name: liferay
 spec:
-  host: eportal-liferays-prod-eportal-staging.eu-de-3.icp.infineon.com
+  host: liferay-eportal.eu-de-3.icp.infineon.com
   to:
     kind: Service
-    name: eportal-liferays-prod
+    name: liferay
   port:
     targetPort: 8080-tcp
