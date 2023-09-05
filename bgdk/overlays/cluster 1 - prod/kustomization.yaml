@@ -2,14 +2,6 @@ resources:
 - deployment.yaml
 - service.yaml
 
-commonLabels:
-  app: liferay-prod
-  app.kubernetes.io/component: liferay-prod
-  app.kubernetes.io/instance: liferay-prod
-  app.kubernetes.io/name: liferay-prod
-  app.kubernetes.io/part-of: liferay-prod
-  app.openshift.io/runtime: liferay-prod
-  app.openshift.io/runtime-namespace: eportal-build
-  app.openshift.io/runtime-version: latest
+
 
 
