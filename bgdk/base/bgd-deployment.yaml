@@ -142,7 +142,7 @@ metadata:
           'f:replicas': {}
           'f:updatedReplicas': {}
       subresource: status
-  namespace: eportal-staging
+  namespace: eportal
 spec:
   replicas: 1
   selector:
