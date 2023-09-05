@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: eportal-liferays-prod
-          image: anaisurlichs/react-example-app:1.0.0
+          image:   image-registry.openshift-image-registry.svc:5000/eportal-build/eportal-liferay@sha256:1bce3be6ecc914b4cf4ed2ecf83f80757b4b9e48ca541671ef41381c594b6de3
           ports:
             - containerPort: 11311
               protocol: TCP
